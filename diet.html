@@ -8,8 +8,6 @@
 
   <title>DIVIN FITNESS</title>
 
-  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link href="../index.css" rel="stylesheet" type="text/css" />
@@ -21,43 +19,69 @@
 
 <div class="topnav">
 	<a href="../index.html" class="hover">HOME</a>
-	<a href="classes.html" class="hover">CLASSES</a></li>
-	<a href="membership.html" class="hover">MEMBERSHIP</a></li>
-	<a href="diet.html" class="hover">DIET</a></li>
-	<a href="contactus.html" class="hover">CONTACT US</a></li>
-	<input id="search" type="text" placeholder="search"> </li>
-	<a href="signin.html" class="hover">Sign In</a></li>
+	<a href="classes.html" class="hover">CLASSES</a>
+	<a href="membership.html" class="hover">MEMBERSHIP</a>
+	<a href="diet.html" class="hover">DIET</a>
+	<a href="contactus.html" class="hover">CONTACT US</a>
+	<input id="search" type="text" placeholder="search">
+	<a href="signin.html" class="hover">Sign In</a>
 </div>
 
-<div class="row">
-	<div class="column">
-	<img id="img_dg" src="../pic/dgc.jpg" alt="diet" />
-	<img id="img_dg" src="../pic/dgm.jpg" alt="diet" />
-	<img id="img_dg" src="../pic/dgw.jpg" alt="diet" />
-	</div>
 	
-	<div class="column">
-	
-	</div>
-	
-	<div class="column">
-
-	<video width="auto" height="auto" autoplay controls loop>
+<div class="video">
+	<video width="auto" height="auto"  autoplay controls loop>
 		<source src="../pic/dg.mp4" type="video/mp4" >
 	</video>
-
-	</div>
-	
 </div>
+<br />
+<div class="slideshow-container">
+	<div class="mySlides fade">
+	<img src="../pic/dgc.jpg" alt="diet" style="width: 100%">
+	</div>
+	<div class="mySlides fade">
+	<img src="../pic/dgm.jpg" alt="diet" style="width: 100%">
+	</div>
+	<div class="mySlides fade">
+	<img src="../pic/dgw.jpg" alt="diet" style="width: 100%">
+	</div>
+</div>
+<br />
+<div style="text-align:center">
+	<span class="dot"></span> 
+	<span class="dot"></span> 
+	<span class="dot"></span>  
+</div>
+  
+  <script>
+  var slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+	var i;
+	var slides = document.getElementsByClassName("mySlides");
+	var dots = document.getElementsByClassName("dot");
+	for (i = 0; i < slides.length; i++) {
+	  slides[i].style.display = "none";  
+	}
+	slideIndex++;
+	if (slideIndex > slides.length) {slideIndex = 1}    
+	for (i = 0; i < dots.length; i++) {
+	  dots[i].className = dots[i].className.replace(" active", "");
+	}
+	slides[slideIndex-1].style.display = "block";  
+	dots[slideIndex-1].className += " active";
+	setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+  </script>	
+
 <br />
 	
 
 <div class="footer">
-	<a href="testimonial.html" class="hover">TESTIMONIAL</a></li>
-	<a href="enquiry.html" class="hover">ENQUIRY</a></li>
+	<a href="testimonial.html" class="hover">TESTIMONIAL</a>
+	<a href="enquiry.html" class="hover">ENQUIRY</a>
 	
 	
 </div>
-
 </body>
 </html>
